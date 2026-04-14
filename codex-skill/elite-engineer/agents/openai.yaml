@@ -1,0 +1,4 @@
+interface:
+  display_name: "Elite Engineer"
+  short_description: "Apply the elite-engineer standard to TypeScript, React, and Next.js work"
+  default_prompt: "Use the elite-engineer skill as the default standard for this task. For non-trivial work, load the relevant reference files before changing code, then apply the architecture, TypeScript, React/Next.js, UI, and anti-pattern guidance directly."

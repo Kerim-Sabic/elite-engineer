@@ -156,10 +156,12 @@ This repo contains the same standard in a few different packaging formats.
 | --- | --- |
 | [`SKILL.md`](SKILL.md) | Canonical readable version of the skill |
 | [`elite-engineer.skill`](elite-engineer.skill) | Packaged skill file for Claude.ai |
+| [`codex-skill/elite-engineer`](codex-skill/elite-engineer) | Codex-ready skill folder |
 | [`.cursorrules`](.cursorrules) | Cursor rules file |
 | [`.claude/CLAUDE.md`](.claude/CLAUDE.md) | Claude Code project instructions |
 | [`references/`](references) | Deep-dive documents for specific domains |
 | [`examples/`](examples) | Before/after examples you can inspect or show to a model |
+| [`docs/codex.md`](docs/codex.md) | Step-by-step Codex install and usage tutorial |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution standards and source requirements |
 
 If you only read one file, read `SKILL.md`.
@@ -190,6 +192,17 @@ cp /path/to/elite-engineer/.claude/CLAUDE.md /path/to/your-project/.claude/CLAUD
 ### Claude.ai
 
 Use the packaged `elite-engineer.skill` file through Claude.ai's skill flow.
+
+### Codex
+
+Use the packaged Codex skill folder at [`codex-skill/elite-engineer`](codex-skill/elite-engineer).
+
+There are two install paths:
+
+- download `elite-engineer-codex-skill.zip` from Releases and extract it into `~/.codex/skills/`
+- install directly from the repo path `codex-skill/elite-engineer` with Codex's skill installer
+
+Full tutorial: [`docs/codex.md`](docs/codex.md)
 
 ### ChatGPT or any tool with custom instructions
 
@@ -259,6 +272,14 @@ For bigger tasks, start with architecture and then pull in the domain-specific r
 .
 |-- .claude/
 |   `-- CLAUDE.md
+|-- codex-skill/
+|   `-- elite-engineer/
+|       |-- SKILL.md
+|       |-- agents/
+|       |   `-- openai.yaml
+|       `-- references/
+|-- docs/
+|   `-- codex.md
 |-- examples/
 |   |-- before-after-components.tsx
 |   |-- before-after-data-fetching.tsx
@@ -275,15 +296,20 @@ For bigger tasks, start with architecture and then pull in the domain-specific r
 |-- elite-engineer.skill
 |-- LICENSE
 |-- README.md
+|-- scripts/
+|   `-- build-codex-skill.ps1
 `-- SKILL.md
 ```
 
 ### File roles
 
 - `SKILL.md` is the primary readable version of the standard.
+- `codex-skill/elite-engineer` is the Codex-installable distribution of the skill.
 - `references/*.md` contain the deeper explanations, examples, and decision trees.
 - `.cursorrules` and `.claude/CLAUDE.md` are delivery formats for specific tools.
 - `elite-engineer.skill` is the packaged artifact for Claude.ai.
+- `docs/codex.md` explains how to install and use the Codex version.
+- `scripts/build-codex-skill.ps1` produces the zip artifact for GitHub Releases.
 - `examples/*.tsx` show what changes in practice.
 
 ---
