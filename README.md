@@ -26,6 +26,33 @@ and toward code that is:
 
 ---
 
+## Codex Quick Start
+
+Fastest install:
+
+1. Download `elite-engineer-codex-skill.zip` from the latest [Releases](https://github.com/Kerim-Sabic/elite-engineer/releases).
+2. Extract the `elite-engineer` folder into `~/.codex/skills/`.
+3. Restart Codex.
+4. Use it explicitly:
+
+```text
+Use $elite-engineer to build this feature.
+```
+
+If you have this repo cloned locally, you can also install directly:
+
+```powershell
+./scripts/install-codex-skill.ps1
+```
+
+```bash
+./scripts/install-codex-skill.sh
+```
+
+Full Codex guide: [`docs/codex.md`](docs/codex.md)
+
+---
+
 ## What This Repository Is
 
 This repository is not an app, library, or framework. It is a **skill/instruction system** you attach to an AI coding tool so the model generates better code and makes better engineering decisions.
@@ -201,6 +228,7 @@ There are two install paths:
 
 - download `elite-engineer-codex-skill.zip` from Releases and extract it into `~/.codex/skills/`
 - install directly from the repo path `codex-skill/elite-engineer` with Codex's skill installer
+- run a local installer script from this repo if you already cloned it
 
 Full tutorial: [`docs/codex.md`](docs/codex.md)
 
@@ -297,7 +325,9 @@ For bigger tasks, start with architecture and then pull in the domain-specific r
 |-- LICENSE
 |-- README.md
 |-- scripts/
-|   `-- build-codex-skill.ps1
+|   |-- build-codex-skill.ps1
+|   |-- install-codex-skill.ps1
+|   `-- install-codex-skill.sh
 `-- SKILL.md
 ```
 
@@ -310,6 +340,7 @@ For bigger tasks, start with architecture and then pull in the domain-specific r
 - `elite-engineer.skill` is the packaged artifact for Claude.ai.
 - `docs/codex.md` explains how to install and use the Codex version.
 - `scripts/build-codex-skill.ps1` produces the zip artifact for GitHub Releases.
+- `scripts/install-codex-skill.ps1` and `scripts/install-codex-skill.sh` install the Codex skill from a local clone.
 - `examples/*.tsx` show what changes in practice.
 
 ---

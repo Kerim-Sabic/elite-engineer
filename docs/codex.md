@@ -4,7 +4,27 @@ This repository now includes a Codex-ready skill folder at [`codex-skill/elite-e
 
 If you want the fastest path, download the latest `elite-engineer-codex-skill.zip` asset from GitHub Releases and install that.
 
-## Option 1: Install From Releases
+## Option 1: Install From A Local Clone
+
+If you already cloned this repo, the shortest path is to run the installer script from the repo root.
+
+### Windows
+
+```powershell
+./scripts/install-codex-skill.ps1
+```
+
+### macOS / Linux
+
+```bash
+./scripts/install-codex-skill.sh
+```
+
+Both scripts install the skill into the default Codex skills directory and replace any existing `elite-engineer` skill folder there.
+
+After the script completes, restart Codex.
+
+## Option 2: Install From Releases
 
 ### Windows
 
@@ -36,7 +56,7 @@ Final path should look like:
 ~/.codex/skills/elite-engineer/references/architecture.md
 ```
 
-## Option 2: Install Directly From GitHub In Codex
+## Option 3: Install Directly From GitHub In Codex
 
 If Codex has the built-in skill installer available, ask it:
 
